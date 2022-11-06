@@ -79,7 +79,7 @@ p {
 }
 
 /* MEDIA QUERIES for: 375px */
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 500px) {
 
     /* set dark filter for body elements */
     body{
