@@ -1,9 +1,140 @@
+:root{
+
+    --soft-orange: hsl(35, 77%, 62%);
+    --soft-red: hsl(5, 85%, 63%);
+
+    --off-white: hsl(36, 100%, 99%);
+    --grayish-blue: hsl(233, 8%, 79%);
+    --dark-grayish-blue: hsl(236, 13%, 42%);
+    --very-dark-blue: hsl(240, 100%, 5%);
+
+}
+
 *, *::after, *::before {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-html{
-    
+/* set font family to Inter */
+html {
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: var(--off-white);
+    padding: 5rem;
+}
+
+/* set font size for 15px */
+p {
+    font-size: 15px;
+}
+
+/* navbar list */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 5rem;
+    position: relative;
+    right: 0;
+}
+
+/* navbar elements */
+.nav-list {
+    display: flex;
+    list-style-type: none;
+}
+
+.nav-list li a {
+    color: var(--very-dark-blue);
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 400;
+    padding: 2rem;
+    text-decoration: none;
+}
+
+/* navbar hover */
+.nav-list li a:hover{
+    color: var(--soft-red);
+}
+
+/* hamburger menu imgs */
+.hamburger,
+.hamburger-img-close,
+.hamburger-img{
+    cursor: pointer;
+    display: none;
+    position: relative;
+}
+
+/* MEDIA QUERIES for: 375px */
+@media only screen and (max-width: 375px) {
+
+    /* set dark filter for body elements */
+    body{
+        transition: background-color .5s ease-in-out;
+    }
+
+    body.active {
+        background-color: rgba(0, 0, 0, .5);
+    }
+
+    /* navbar elements */
+    .navbar {
+        padding: 1rem;
+    }
+
+    .nav-list {
+        align-items: left;
+        background-color: var(--off-white);
+        flex-direction: column;
+        height: 100vh;
+        justify-content: center;
+        padding: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+        transform: translate(-150%);
+        transition: transform .3s ease-in-out;
+        width: 70%;
+    }
+
+    .nav-list li a{
+        display: flex;
+        font-size: 22px;
+        justify-content: space-between;
+        margin-bottom: -1rem;
+        padding: 2rem;
+    }
+
+    /* set translate on X, for navbar list */
+    .nav-list.active {
+        transform: translateX(0%);
+    }
+
+    /* show and hidden for hamburger elements in js */
+    .hamburger-img {
+        display: block;
+    }
+
+    .hamburger-img.active {
+        display: none;
+    }
+    .hamburger-img-close.active {
+        display: block;
+    }
+
+}
+
+
+
+.attribution {
+    font-size: 11px; text-align: center;
+    padding: 0;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
 }

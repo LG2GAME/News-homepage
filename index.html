@@ -4,25 +4,46 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet">  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="style.css">
   
   <title>Frontend Mentor | News homepage</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
 
-  Home
-  New
-  Popular
-  Trending
-  Categories
-
+  <!-- navbar -->
+  <nav class="navbar">
+    <!-- logo -->
+    <div class="logo">
+      <img src="assets/images/logo.svg" alt="logo of page" class="logo-img">
+    </div>
+    <!-- navbar list -->
+    <ul class="nav-list">
+      <!-- navbar elements -->
+      <li>
+        <a href="#" id="list-element">Home</a>
+      </li>
+      <li>
+        <a href="#" id="list-element">New</a>
+      </li>
+      <li>
+        <a href="#" id="list-element">Popular</a>
+      </li>
+      <li>
+        <a href="#" id="list-element">Trending</a>
+      </li>
+      <li>
+        <a href="#" id="list-element">Categories</a>
+      </li>
+    </ul>
+    <!-- hamburger menu -->
+    <div class="hamburger">
+      <img src="assets/images/icon-menu.svg" alt="" class="hamburger-img">
+      <img src="assets/images/icon-menu-close.svg" alt="" class="hamburger-img-close">
+    </div>
+  </nav>
+<!--
   The Bright Future of Web 3.0?
 
   We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. 
@@ -52,10 +73,13 @@
   03
   The Growth of Gaming
   How the pandemic has sparked fresh opportunities.
-  
+-->
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="https://github.com/LG2GAME" target="_blank">Arek Gorszczyk</a>.
   </div>
+
+  <script src="script.js"></script>
+
 </body>
 </html>
