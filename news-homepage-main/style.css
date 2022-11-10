@@ -23,14 +23,14 @@ html {
 
 body {
     background-color: var(--off-white);
-    padding: 5rem;
+    padding: 4.5rem 9rem;
 }
 
 /* MEDIA QUERIES for: 375px */
 @media only screen and (max-width: 375px) {
 
     body {
-        padding: 0;
+        padding: 1rem 1rem;
     }
 
 }
@@ -145,15 +145,20 @@ p {
     display: grid;
     gap: 30px;
     grid-template-columns: repeat(3, 365px);
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 300px);
     height: 100%;
+    align-items: center;
+    justify-content: center;
 }
 
 /* MEDIA QUERIES for: 375px */
 @media only screen and (max-width: 375px) {
+
     .main {
         display: inline-block;
+        margin: 0 auto;
     }
+
 }
 
 /* img on page */
@@ -170,86 +175,174 @@ p {
 
 /* MEDIA QUERIES for: 375px */
 @media only screen and (max-width: 375px) {
+
     .img-web {
         background-image: url(assets/images/image-web-3-mobile.jpg);
         margin: 0 auto;
         width: 320px;
     }
+
 }
 
 /* header of page */
 .header-page {
-    grid-row-start: 2;
+    grid-column-end: 2;
     grid-column-start: 1;
     grid-row-end: 3;
-    grid-column-end: 2;
+    grid-row-start: 2;
 }
 
 .header-page h1 {
-    font-size: 64px;
     color: var(--very-dark-blue);
+    font-size: 64px;
+    font-weight: 800;
+}
+
+/* MEDIA QUERIES for: 375px */
+/* @media only screen and (max-width: 375px) {
+
+    .header-page h1 {
+        text-align: center;
+    }
+
+} */
+
+/* informations of page */
+.page-info {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+.page-info p {
+    color: var(--dark-grayish-blue);
+    font-size: 15px;
+}
+
+.page-info button {
+    background-color: var(--soft-red);
+    border: none;
+    color: #fff;
+    font-weight: 800;
+    letter-spacing: 5px;
+    margin-top: 6rem;
+    padding: 1rem 3rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+/* MEDIA QUERIES for: 375px */
+@media only screen and (max-width: 375px) {
+
+    .page-info button {
+        margin-bottom: 4rem;
+        margin-top: 2rem;
+    }
+
+}
+
+/* container new */
+.container-new {
+    background-color: var(--very-dark-blue);
+    grid-column-end: 4;
+    grid-column-start: 3;
+    grid-row-end: 3;
+    grid-row-start: 1;
+    padding: 2rem 1rem;
+    height: 100%;
+}
+
+.new h1 {
+    color: var(--soft-orange);
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+
+.news-1 h2,
+.news-2 h2,
+.news-3 h2 {
+    font-size: 22px;
+    color: #fff;
+    margin-bottom: .5rem;
+}
+
+.news-1 p,
+.news-2 p,
+.news-3 p {
+    font-size: 16px;
+    color: var(--grayish-blue);
+    margin-bottom: 2rem;
+    font-weight: 400;
+}
+
+.news-1,
+.news-2 {
+    border-bottom: 1px solid var(--dark-grayish-blue);
+    margin: 2rem 0;
+}
+
+/* MEDIA QUERIES for: 375px */
+@media only screen and (max-width: 375px) {
+
+    .news-1 p,
+    .news-2 p,
+    .news-3 p {
+        margin-bottom: 2rem;
+    }
+
+}
+
+.ft-info {
+    display: flex;
+    justify-content: space-around;
+}
+
+.info-1,
+.info-2,
+.info-3 {
+    display: flex;
+}
+
+.ft-info img {
+    width: 150px;
+    padding: 1rem;
+}
+
+.info-tekst {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.info-tekst h2 {
+    font-size: 42px;
+    color: var(--grayish-blue);
+}
+
+.info-tekst h3 {
+    color: var(--very-dark-blue);
+    font-size: 16px;
     font-weight: 800;
 }
 
 /* MEDIA QUERIES for: 375px */
 @media only screen and (max-width: 375px) {
-    .header-page h1 {
-        text-align: center;
+
+    .ft-info {
+        display: block;
     }
+
 }
 
-/* informations of page */
-.page-info {
-    grid-column-end: 3;
-    grid-column-start: 2;
-    grid-row-end: 3;
-    grid-row-start: 2;
-}
-
-.page-info p {
-    font-size: 15px;
-    color: var(--dark-grayish-blue);
-}
-
-.page-info button {
-    padding: 1rem 3rem;
-    background-color: var(--soft-red);
-    border: none;
-    letter-spacing: 5px;
-    color: #fff;
-    text-transform: uppercase;
-    font-weight: 800;
-    text-align: center;
-}
-
+/* links to work page and my github :) */
 .attribution {
     font-size: 11px; text-align: center;
     padding: 0;
+    margin-top: 5rem;
 }
 
 .attribution a {
     color: hsl(228, 45%, 44%);
 }
-
-/* 
-<!-- container new -->
-  <div class="container-new">
-    <!-- new char -->
-    <div class="new">
-      <h1>New</h1>
-    </div>
-    <!-- news -->
-    <div class="news-1">
-      <h2>Hydrogen VS electric Cars</h2>
-      <p>Will hydrogen-fueled cars ever catch up to EVs?</p>
-    </div>
-    <div class="news-2">
-      <h2>The Downsides of AI Artistry</h2>
-      <p>What are the possible adverse effects of on-demand AI image genration?</p>
-    </div>
-    <div class="news-3">
-      <h2>Is VC Funding Drying Up?</h2>
-      <p>Private funding by VC firms is down 50% YOY. We tak a look at what that means.</p>
-    </div>
-  </div> 
-*/
